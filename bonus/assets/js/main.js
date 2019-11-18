@@ -35,11 +35,8 @@ function clickDiv(){
         alert("E' avvenuto un errore. ");
       }
     });
-
   });
-
 };
-
 
 $(document).ready(function(){
 
@@ -48,7 +45,6 @@ $(document).ready(function(){
       var copiaTempl = $("#hb-template").html();
       var templReady = Handlebars.compile(copiaTempl);
       var griglia =+ $(".wrapper").append(templReady);
-
     }
 
     // attivazione funzione click-colore
