@@ -39,8 +39,8 @@ function clickDiv(){
 };
 $(document).ready(function(){
 
-  if ($(".row div").hasClass(".active") == true) {
-    $(this).unbind("click");
+  if ($(".row div").hasClass("active") == true) {
+    $(this).off("click");
   } else {
     clickDiv();
   };
