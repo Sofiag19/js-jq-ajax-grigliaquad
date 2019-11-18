@@ -24,9 +24,11 @@ function clickDiv(){
         if (num <= 5) {
           $(questoP).html(num);
           $(questoDiv).addClass("yellow");
+          $("body").css("background-color","rgba(227, 255, 3, 0.61)");
         } else if (num > 5) {
           $(questoP).html(num);
           $(questoDiv).addClass("green");
+          $("body").css("background-color","rgba(74, 255, 0, 0.53)");
         }
         $(questoDiv).off("click");
       },

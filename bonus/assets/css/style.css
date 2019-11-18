@@ -18,6 +18,7 @@
   width: 100px;
   height: 100px;
   border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 4px 0px, rgba(0, 0, 0, 0.08) 0px 8px 16px 0px;
 }
 
 .row div p {
@@ -25,12 +26,24 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
+  font-weight: bold;
+  font-size: 30px;
 }
 
 .yellow {
   background-color: yellow;
+  background-image: radial-gradient(yellow, rgb(196, 210, 28));
+}
+
+.yellow p {
+  color: green;
 }
 
 .green {
   background-color: green;
+  background-image: radial-gradient(green, rgb(171, 198, 6));
+}
+
+.green p {
+  color: yellow;
 }
