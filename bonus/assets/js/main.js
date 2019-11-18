@@ -9,6 +9,8 @@ function clickDiv(){
 
     var questoDiv = $(this);
 
+    $(questoDiv).addClass("active");
+
     var questoP = $(this).children("p");
 
     $.ajax({
@@ -25,7 +27,6 @@ function clickDiv(){
           $(questoP).html(num);
           $(questoDiv).css("background", "green");
         }
-        $(questoDiv).off("click");
       },
 
       error : function (errore) {
@@ -38,6 +39,11 @@ function clickDiv(){
 };
 $(document).ready(function(){
 
+  if ($(".row div").hasClass("active") == true) {
+    $(this).off("click");
+  } else {
     clickDiv();
+  };
+
 
 });

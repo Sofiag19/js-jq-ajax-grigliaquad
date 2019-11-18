@@ -1,0 +1,26 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  height: 100vh;
+}
+.row {
+  display: flex;
+  height: calc(100vh / 6);
+}
+
+.row div {
+  position: relative;
+  border: 1px solid black;
+  width: calc(100% / 6);
+}
+
+.row div p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
