@@ -23,10 +23,10 @@ function clickDiv(){
         var num = numeroRitorno.response;
         if (num <= 5) {
           $(questoP).html(num);
-          $(questoDiv).css("background", "yellow");
+          $(questoDiv).addClass("yellow");
         } else if (num > 5) {
           $(questoP).html(num);
-          $(questoDiv).css("background", "green");
+          $(questoDiv).addClass("green");
         }
         $(questoDiv).off("click");
       },
