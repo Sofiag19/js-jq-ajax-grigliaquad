@@ -2,14 +2,15 @@
 // Se è <= 5 il quadrato diventa giallo,
 // se è > di 5 il quadrato diventa verde.
 // Il numero ottenuto appare al centro del quadrato
+// BONUS :
+// generare dinamicamente la griglia;
+// migliorare aspetto output, quindi renderlo più elaborato.
 
 function clickDiv(){
 
   $(".row div").click(function(){
 
     var questoDiv = $(this);
-
-    $(questoDiv).addClass("active");
 
     var questoP = $(this).children("p");
 
@@ -27,6 +28,7 @@ function clickDiv(){
           $(questoP).html(num);
           $(questoDiv).css("background", "green");
         }
+        $(questoDiv).off("click");
       },
 
       error : function (errore) {
@@ -35,15 +37,20 @@ function clickDiv(){
     });
   });
 
-
 };
+
+
 $(document).ready(function(){
 
-  if ($(".row div").hasClass("active") == true) {
-    $(this).off("click");
-  } else {
-    clickDiv();
-  };
+    // creazione dinamica griglia con handlebars
+    for (var i = 0; i < 6; i++) {
+      var copiaTempl = $("#hb-template").html();
+      var templReady = Handlebars.compile(copiaTempl);
+      var griglia =+ $(".wrapper").append(templReady);
 
+    }
+
+    // attivazione funzione click-colore
+    clickDiv();
 
 });
