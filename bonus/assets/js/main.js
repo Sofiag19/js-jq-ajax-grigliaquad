@@ -35,6 +35,7 @@ function clickDiv(){
         alert("E' avvenuto un errore. ");
       }
     });
+
   });
 
 };
@@ -52,5 +53,6 @@ $(document).ready(function(){
 
     // attivazione funzione click-colore
     clickDiv();
+
 
 });

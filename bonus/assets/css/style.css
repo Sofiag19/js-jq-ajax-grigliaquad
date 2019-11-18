@@ -9,13 +9,15 @@
 }
 .row {
   display: flex;
-  height: calc(100vh / 6);
+  justify-content: center;
 }
 
 .row div {
   position: relative;
   border: 1px solid black;
-  width: calc(100% / 6);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
 
 .row div p {
